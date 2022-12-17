@@ -9,11 +9,11 @@ import javax.persistence.Id;
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
-    String firstName;
-    String lastName;
+    private Long id;
+    private String firstName;
+    private String lastName;
 
-    public Person(long id, String firstName, String lastName) {
+    public Person(Long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,6 +24,9 @@ public class Person {
         this.lastName = lastName;
     }
     public Person() {
+        id = 1L;
+        firstName = "New";
+        lastName = "Person";
     }
 
 
